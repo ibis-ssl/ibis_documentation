@@ -67,7 +67,7 @@ markdown_extensions:
 
 extra_css:
   - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
-  - extra.css
+  - stylesheet/extra.css
   
 extra_javascript:
   - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
