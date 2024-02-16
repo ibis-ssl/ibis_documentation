@@ -3,7 +3,7 @@
 ## 立ち上げ
 
 ```bash
-ros2 launch simple_ai simple_ai.launch.xml
+ros2 launch crane_bringup simple_ai.launch.xml
 ```
 
 ### シミュレーションモード
