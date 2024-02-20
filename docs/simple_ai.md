@@ -3,7 +3,7 @@
 ## 立ち上げ
 
 ```bash
-ros2 launch crane_bringup simple_ai.launch.xml
+ros2 launch simple_ai simple_ai.launch.xml
 ```
 
 ### シミュレーションモード
@@ -50,18 +50,18 @@ graph TD
         Robot[Actual Robot CM4]
         SSLVision[SSL Vision]
     end
-    
+
     SSLVision -. UDP .->  VisionNode
     VisionNode -- /detection -->  VT
     VT -- /detection_tracked -->  WP
     VisionNode -- /geometry -->  WP
-    
+
     WP -- /world_model -->  Main
     Main -- /control_targets --> LP
     LP -- /robot_commands -->  Sender
-    
+
     Sender -. UDP .->  Robot
-    
+
     Robot -. UDP .->  Receiver
     Receiver -- /feedback -->  WP
 ```
