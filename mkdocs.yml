@@ -1,9 +1,9 @@
 repo_url: https://github.com/ibis-ssl/crane_documentation
-site_name: crane Documentation
+site_name: ibis Documentation
 theme:
   name: material
   palette:
-    primary: amber
+    primary: red
 
 extra:
   font:
@@ -13,13 +13,13 @@ extra:
     language: en
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/ibis_ssl
+      link: https://twitter.com/team_ibis
     - icon: fontawesome/brands/github
       link: https://github.com/ibis-ssl
 #  analytics:
 #    provider: google
 #    property: G-P5846VEQ4L
-copyright: "Copyright &copy; 2023 ibis-ssl"
+copyright: "Copyright &copy; 2024 ibis-ssl"
 plugins:
   - search
   - git-revision-date-localized
