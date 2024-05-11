@@ -1,4 +1,4 @@
-repo_url: https://github.com/ibis-ssl/crane_documentation
+repo_url: https://github.com/ibis-ssl/ibis_documentation
 site_name: ibis Documentation
 theme:
   name: material
