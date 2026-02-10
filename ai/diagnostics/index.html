@@ -1,0 +1,6666 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../defense/">
+      
+      
+        <link rel="next" href="../diagram/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Crane Diagnostics System（診断システム） - ibis Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#crane-diagnostics-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ibis Documentation" class="md-header__button md-logo" aria-label="ibis Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ibis Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Crane Diagnostics System（診断システム）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ibis-ssl/ibis_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ibis Documentation" class="md-nav__button md-logo" aria-label="ibis Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ibis Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ibis-ssl/ibis_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ibis 公開ドキュメント
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crane Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attacker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attackerスキル（2025年版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_model_calibration_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ボールモデル・キッカーモデルキャリブレーションガイド
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_possession/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ボール所有権判定（非推奨）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_tracking_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ボールトラッキングシステム設計書
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    座標系仕様
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crane_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_basics パッケージドキュメント
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crane_basics_advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_basics パッケージ 高度な使用法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crane_basics_impl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_basics パッケージ 実装詳細
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../defense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ディフェンス戦術システム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crane Diagnostics System（診断システム）
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crane Diagnostics System（診断システム）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目次
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概要
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概要">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主な特徴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断レベル
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        アーキテクチャ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="アーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        層1: データ収集層（各コンポーネント）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-diagnostic_aggregator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        層2: 統合層（diagnostic_aggregator）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-worldmodelwrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        層3: 統合活用層（WorldModelWrapper）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断階層構造
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="診断階層構造">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        タイムアウト設定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        コンポーネント別診断詳細
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コンポーネント別診断詳細">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crane_robot_receiverdiagnosticpublisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_robot_receiver（DiagnosticPublisher）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_robot_receiver（DiagnosticPublisher）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名の命名規則
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 通信状態監視（communication）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-battery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. バッテリー監視（battery）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-robot_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ロボットエラー監視（robot_error）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーマップ管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可視化機能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        シミュレータモード
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane_local_planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_local_planner
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_local_planner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        監視項目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane_world_model_publisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_world_model_publisher
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_world_model_publisher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        監視項目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane_session_coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_session_coordinator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_session_coordinator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        監視項目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnosedpublishercrane_comm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DiagnosedPublisher（crane_comm）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DiagnosedPublisher（crane_comm）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概要
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用箇所
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        動作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        利用可否判定の多層設計
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="利用可否判定の多層設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        循環参照回避のための設計思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotinfocavailable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RobotInfo（C++構造体）の多層available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RobotInfoメッセージフィールド
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        統合処理とデータフロー
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーレベルの扱い
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーコードリファレンス
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="エラーコードリファレンス">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラー種別
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーコード詳細
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断情報の活用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="診断情報の活用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ロボット利用可否判定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可視化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定ファイル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="設定ファイル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic_aggregatoryaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diagnostic_aggregator.yaml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="diagnostic_aggregator.yaml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本構造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        アナライザータイプ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パラメータ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cranelaunchxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane.launch.xml統合
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane.launch.xml統合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic_publisher_node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diagnostic_publisher_node起動
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic_aggregator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diagnostic_aggregator起動
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断トピック
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="診断トピック">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        標準トピック
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="標準トピック">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostics_agg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics_agg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostics_toplevel_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics_toplevel_state
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ロボット別トピック（後方互換）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ロボット別トピック（後方互換）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnosticsrobot_02d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics/robot_{:02d}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        開発ガイド
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="開発ガイド">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        新規診断項目の追加方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="新規診断項目の追加方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-diagnostic_updater" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. diagnostic_updaterの使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 診断名の命名規則
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-diagnostic_aggregatoryaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. diagnostic_aggregator.yamlへの追加
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-diagnosedpublisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DiagnosedPublisherの使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        デバッグ方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="デバッグ方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rqt_robot_monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rqt_robot_monitorの使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foxglove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foxgloveでの確認
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トピックの直接確認
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断情報のフィルタリング
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トラブルシューティング
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="トラブルシューティング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主な問題と対処
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考資料
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参考資料">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ros-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS 2公式ドキュメント
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        関連パッケージドキュメント
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crane内部実装ファイル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crane内部実装ファイル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ヘッダーファイル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        実装ファイル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定ファイル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        メッセージ定義
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可視化ツール
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ノードダイアグラム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    docker立ち上げ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../erforce_sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ER-Force Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grSim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    grSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../match/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    試合チェックリスト
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ネットワーク設定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../offense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    オフェンス戦術システム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    パス連携システム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crane開発進捗と機能概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ルール違反対応状況
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rvo2_local_planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RVO2 Local Planner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    環境構築
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simple_ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simple AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simple_placer_planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SimplePlacerPlanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../skill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skill実装ガイド
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    開発ツールと設定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSL-Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可視化APIガイド（VisualizerMessageBuilder / CraneVisualizerBuffer）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../world_model_wrapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WorldModelWrapper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_31" id="__nav_2_31_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_31">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Logs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-04-16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-04-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-03
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-06
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-07
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-13
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-27
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-28
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-05-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-05-30
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-06-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-06-06
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-06-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-06-07
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-06-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-06-12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-06-17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-06-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-06-18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-06-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-06-21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-06-21
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-06-22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-07-01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-07-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-07-01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-07-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-07-23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-11-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-11-04
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2023-11-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-11-10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2024-01-28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024-01-28
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2024-01-30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024-01-30
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2024-01-31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024-01-31
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/2024-08-16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024-08-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/latency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    遅延のボトルネック解析とアーキテクチャ最適化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/laytency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    遅延のボトルネック解析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_32" id="__nav_2_32_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nodes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_32">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nodes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodes/game_analyzer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game Analyzer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodes/play_switcher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Play Switcher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_33" id="__nav_2_33_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_33">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Other team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other_team/Sumatra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TIGERs Sumatra - 競合チーム分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other_team/ZJUNLict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZJUNLict - 競合チーム分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other_team/rione_racoon_ai_beta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ri-one RACOON AI Beta - 競合チーム分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other_team/robodragons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RoboDragons - 競合チーム分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other_team/tigers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TIGERs Mannheim - 競合チーム分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_34" id="__nav_2_34_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packages
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_34">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Packages
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Craneパッケージドキュメント ポータル
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/closest_point_vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    closest_point_vendor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/consai_visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    consai_visualizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_bringup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_bringup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_clock_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_clock_publisher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_comm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_comm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_commentary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_commentary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_debug_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_debug_tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_game_analyzer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_game_analyzer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_geometry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_grsim_operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_grsim_operator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_gui
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_lint_common/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_lint_common
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_local_planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_local_planner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_msg_wrappers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_msg_wrappers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_msgs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_msgs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_physics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_physics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_planner_plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_planner_plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_play_switcher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_play_switcher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_robot_receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_robot_receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_robot_skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_robot_skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_sender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_sender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_session_controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_session_controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_session_coordinator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_session_coordinator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_simple_ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SimpleAI (SimpleAITactic)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_speaker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_speaker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_tactic_coordinator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_tactic_coordinator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_tactics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_tactics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_teleop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_teleop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_visualization_aggregator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_visualization_aggregator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_visualization_interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_visualization_interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/crane_world_model_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crane_world_model_publisher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/matplotlib_cpp_17_vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    matplotlib_cpp_17_vendor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/modern_orca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    modern_orca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/robocup_ssl_comm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    robocup_ssl_comm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/robocup_ssl_msgs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    robocup_ssl_msgs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/rvo2_vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rvo2_vendor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目次
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概要
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概要">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主な特徴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断レベル
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        アーキテクチャ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="アーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        層1: データ収集層（各コンポーネント）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-diagnostic_aggregator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        層2: 統合層（diagnostic_aggregator）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-worldmodelwrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        層3: 統合活用層（WorldModelWrapper）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断階層構造
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="診断階層構造">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        タイムアウト設定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        コンポーネント別診断詳細
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="コンポーネント別診断詳細">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crane_robot_receiverdiagnosticpublisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_robot_receiver（DiagnosticPublisher）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_robot_receiver（DiagnosticPublisher）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名の命名規則
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 通信状態監視（communication）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-battery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. バッテリー監視（battery）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-robot_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ロボットエラー監視（robot_error）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーマップ管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可視化機能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        シミュレータモード
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane_local_planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_local_planner
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_local_planner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        監視項目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane_world_model_publisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_world_model_publisher
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_world_model_publisher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        監視項目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane_session_coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane_session_coordinator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane_session_coordinator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        監視項目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnosedpublishercrane_comm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DiagnosedPublisher（crane_comm）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DiagnosedPublisher（crane_comm）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概要
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用箇所
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        動作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        利用可否判定の多層設計
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="利用可否判定の多層設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        循環参照回避のための設計思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotinfocavailable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RobotInfo（C++構造体）の多層available
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RobotInfoメッセージフィールド
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        統合処理とデータフロー
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーレベルの扱い
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーコードリファレンス
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="エラーコードリファレンス">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラー種別
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        エラーコード詳細
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断情報の活用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="診断情報の活用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ロボット利用可否判定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可視化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定ファイル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="設定ファイル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic_aggregatoryaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diagnostic_aggregator.yaml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="diagnostic_aggregator.yaml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本構造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        アナライザータイプ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パラメータ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cranelaunchxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crane.launch.xml統合
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crane.launch.xml統合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic_publisher_node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diagnostic_publisher_node起動
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic_aggregator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        diagnostic_aggregator起動
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断トピック
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="診断トピック">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        標準トピック
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="標準トピック">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostics_agg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics_agg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostics_toplevel_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics_toplevel_state
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ロボット別トピック（後方互換）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ロボット別トピック（後方互換）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagnosticsrobot_02d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /diagnostics/robot_{:02d}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        開発ガイド
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="開発ガイド">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        新規診断項目の追加方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="新規診断項目の追加方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-diagnostic_updater" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. diagnostic_updaterの使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 診断名の命名規則
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-diagnostic_aggregatoryaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. diagnostic_aggregator.yamlへの追加
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-diagnosedpublisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DiagnosedPublisherの使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        デバッグ方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="デバッグ方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rqt_robot_monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rqt_robot_monitorの使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foxglove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foxgloveでの確認
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トピックの直接確認
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        診断情報のフィルタリング
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        トラブルシューティング
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="トラブルシューティング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主な問題と対処
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考資料
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参考資料">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ros-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ROS 2公式ドキュメント
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        関連パッケージドキュメント
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crane内部実装ファイル
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crane内部実装ファイル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ヘッダーファイル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        実装ファイル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定ファイル
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        メッセージ定義
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可視化ツール
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        まとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="crane-diagnostics-system">Crane Diagnostics System（診断システム）<a class="headerlink" href="#crane-diagnostics-system" title="Permanent link">&para;</a></h1>
+<h2 id="_1">目次<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#アーキテクチャ">アーキテクチャ</a></li>
+<li><a href="#診断階層構造">診断階層構造</a></li>
+<li><a href="#コンポーネント別診断詳細">コンポーネント別診断詳細</a></li>
+<li><a href="#利用可否判定の多層設計">利用可否判定の多層設計</a></li>
+<li><a href="#エラーコードリファレンス">エラーコードリファレンス</a></li>
+<li><a href="#診断情報の活用">診断情報の活用</a></li>
+<li><a href="#設定ファイル">設定ファイル</a></li>
+<li><a href="#診断トピック">診断トピック</a></li>
+<li><a href="#開発ガイド">開発ガイド</a></li>
+<li><a href="#トラブルシューティング">トラブルシューティング</a></li>
+<li><a href="#参考資料">参考資料</a></li>
+</ul>
+<hr />
+<h2 id="_2">概要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>CraneシステムはROS 2の標準diagnostics機能を活用した包括的な診断・監視システムを実装しています。このシステムにより、システム全体の健全性をリアルタイムで監視し、問題を早期に検出できます。</p>
+<h3 id="_3">主な特徴<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ROS 2 diagnosticsの活用</strong>: <code>diagnostic_updater</code>と<code>diagnostic_aggregator</code>を使用した標準準拠の診断システム</li>
+<li><strong>システム全体の監視</strong>: Vision処理、AI計画、経路計画、ロボット通信・バッテリー・エラー状態を包括的に監視</li>
+<li><strong>階層的な情報管理</strong>: Base Station（計算PC）とTeam（ロボット群）の2大分類による体系的な診断情報の管理</li>
+<li><strong>リアルタイムエラー検出</strong>: 通信タイムアウト、バッテリー低下、ハードウェアエラーの即座の検出</li>
+<li><strong>可視化統合</strong>: Foxgloveでのロボット位置へのエラーメッセージ表示</li>
+<li><strong>ロボット利用可否判定</strong>: 診断情報を<code>robot-&gt;available</code>フラグに統合し、故障ロボットの自動除外</li>
+</ul>
+<h3 id="_4">診断レベル<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>診断システムは以下の4段階のレベルで状態を報告します：</p>
+<table>
+<thead>
+<tr>
+<th>レベル</th>
+<th>値</th>
+<th>意味</th>
+<th>色（可視化）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OK</strong></td>
+<td>0</td>
+<td>正常動作</td>
+<td>白</td>
+</tr>
+<tr>
+<td><strong>WARN</strong></td>
+<td>1</td>
+<td>警告状態（動作可能だが注意が必要）</td>
+<td>黄色</td>
+</tr>
+<tr>
+<td><strong>ERROR</strong></td>
+<td>2</td>
+<td>エラー状態（動作不可または重大な問題）</td>
+<td>赤</td>
+</tr>
+<tr>
+<td><strong>STALE</strong></td>
+<td>3</td>
+<td>診断情報が古い（タイムアウト）</td>
+<td>グレー</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">アーキテクチャ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Crane診断システムは以下の3層構造で構成されています：</p>
+<h3 id="1">層1: データ収集層（各コンポーネント）<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>各主要コンポーネントが独自の診断情報を生成・配信します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│           データ収集層（Diagnostic Publishers）           │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├──────────────────────────────────────────────────────────┤
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  ┌────────────────────┐  ┌───────────────────────┐      │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  │ DiagnosticPublisher│  │ WorldModelPublisher   │      │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  │ (robot_receiver)   │  │ - vision/processing   │      │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│  │ - communication    │  └───────────────────────┘      │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│  │ - battery          │                                  │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  │ - robot_error      │  ┌───────────────────────┐      │
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│  └────────────────────┘  │ TacticCoordinator     │      │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│                          │ - ai_planner/planning │      │
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  ┌────────────────────┐  └───────────────────────┘      │
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│  │ LocalTactic       │                                  │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│  │ - path_planning    │  ┌───────────────────────┐      │
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│  └────────────────────┘  │ DiagnosedPublisher    │      │
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│                          │ (トピック頻度監視)     │      │
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│                          └───────────────────────┘      │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└──────────────────────────────────────────────────────────┘
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                            ↓ /diagnostics
+</code></pre></div>
+<p><strong>使用技術</strong>: ROS 2 <code>diagnostic_updater</code>パッケージ</p>
+<h3 id="2-diagnostic_aggregator">層2: 統合層（diagnostic_aggregator）<a class="headerlink" href="#2-diagnostic_aggregator" title="Permanent link">&para;</a></h3>
+<p><code>/diagnostics</code>トピックの情報を階層化して集約します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>┌──────────────────────────────────────────────────────────┐
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>│            統合層（diagnostic_aggregator）                │
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├──────────────────────────────────────────────────────────┤
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│                                                            │
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│  SSL_System/                                               │
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│  ├── Base_Station/                                         │
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│  │   ├── Vision/       (vision/*)                          │
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│  │   ├── AI_Planner/   (ai_planner/*)                      │
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│  │   └── Local_Planner/ (local_planner/*)                  │
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│  └── Team/                                                  │
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│      ├── Robot_00/      (robot_00/*)                        │
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│      ├── Robot_01/      (robot_01/*)                        │
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│      ├── ...                                                │
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│      └── Robot_12/      (robot_12/*)                        │
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│                                                            │
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>└──────────────────────────────────────────────────────────┘
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        ↓ /diagnostics_agg, /diagnostics_toplevel_state
+</code></pre></div>
+<p><strong>設定ファイル</strong>: <code>crane_bringup/config/diagnostic_aggregator.yaml</code></p>
+<h3 id="3-worldmodelwrapper">層3: 統合活用層（WorldModelWrapper）<a class="headerlink" href="#3-worldmodelwrapper" title="Permanent link">&para;</a></h3>
+<p>診断情報をロボット利用可否判定に反映します。**循環参照を回避するため、入力ソース別にavailableを分離**しています。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>┌──────────────────────────────────────────────────────────┐
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>│         統合活用層（WorldModelWrapper）                   │
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├──────────────────────────────────────────────────────────┤
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│  【循環参照回避設計】                                      │
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│                                                            │
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│  入力ソース別にavailableを分離:                            │
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│  ┌─────────────────────────────────────────┐            │
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│  │ available_vision    (診断結果に依存しない) │            │
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│  │ available_feedback  (診断結果に依存しない) │            │
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│  │ available_hardware  (診断結果を反映)       │            │
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>│  └─────────────────────────────────────────┘            │
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>│                                                            │
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>│  /diagnostics_agg購読                                      │
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>│    ↓                                                       │
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>│  ERRORレベル診断検出 → available_hardware更新              │
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>│                                                            │
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>│  総合判定: available() = available_vision &amp;&amp; available_hardware │
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>│                                                            │
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>│  ※診断の入力はavailable_vision等のみ参照 → 循環なし       │
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>└──────────────────────────────────────────────────────────┘
+</code></pre></div>
+<p><strong>コード</strong>: <code>crane_msg_wrappers/world_model_wrapper.cpp</code>, <code>crane_physics/robot_info.hpp</code></p>
+<hr />
+<h2 id="_6">診断階層構造<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>診断情報は以下の階層構造で管理されます（<code>diagnostic_aggregator.yaml</code>で定義）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>SSL_System/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── Base_Station/           # 計算PC上のコンポーネント
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│   ├── Vision/            # vision/* の診断
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│   │   └── vision/processing
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│   ├── AI_Planner/        # ai_planner/* の診断
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│   │   └── ai_planner/planning_cycle
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│   └── Local_Planner/     # local_planner/* の診断
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│       └── local_planner/path_planning
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>└── Team/                   # ロボット群
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    ├── Robot_00/          # robot_00/* の診断
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    │   ├── robot_00/communication
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    │   ├── robot_00/battery
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    │   └── robot_00/robot_error
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    ├── Robot_01/          # robot_01/* の診断
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    ├── ...
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    └── Robot_12/          # robot_12/* の診断
+</code></pre></div>
+<h3 id="_7">タイムアウト設定<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>すべてのアナライザーに対して**5.0秒**のタイムアウトが設定されています。診断情報が5秒以上更新されない場合、状態は<code>STALE</code>となります。</p>
+<hr />
+<h2 id="_8">コンポーネント別診断詳細<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="crane_robot_receiverdiagnosticpublisher">crane_robot_receiver（DiagnosticPublisher）<a class="headerlink" href="#crane_robot_receiverdiagnosticpublisher" title="Permanent link">&para;</a></h3>
+<p>最も包括的な診断機能を提供する中核コンポーネントです。各ロボット（ID 0-12）について3種類の診断情報を提供します。</p>
+<h4 id="_9">診断名の命名規則<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>robot_{:02d}/communication    # ロボット00-12の通信状態
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>robot_{:02d}/battery          # ロボット00-12のバッテリー状態
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>robot_{:02d}/robot_error      # ロボット00-12のロボットエラー
+</code></pre></div>
+<p><strong>注</strong>: ロボット番号は必ず2桁形式（例: <code>robot_00</code>, <code>robot_01</code>）で表記されます。</p>
+<h4 id="1-communication">1. 通信状態監視（communication）<a class="headerlink" href="#1-communication" title="Permanent link">&para;</a></h4>
+<p>ロボットとの通信品質を監視します。</p>
+<p><strong>監視項目</strong>: Ping応答時間</p>
+<p><strong>判定基準</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>レベル</th>
+<th>メッセージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ping時間 &gt; 50ms</td>
+<td>ERROR</td>
+<td>"Communication is too slow: {ping_time} ms"</td>
+</tr>
+<tr>
+<td>Ping時間 &gt; 10ms</td>
+<td>WARN</td>
+<td>"Communication is slow: {ping_time} ms"</td>
+</tr>
+<tr>
+<td>Ping時間 ≤ 10ms</td>
+<td>OK</td>
+<td>"Communication is OK: {ping_time} ms"</td>
+</tr>
+<tr>
+<td>Pingデータなし</td>
+<td>WARN</td>
+<td>"No ping data available"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>KeyValue情報</strong>:</p>
+<ul>
+<li><code>ping_time</code>: Ping応答時間（ミリ秒）</li>
+</ul>
+<p><strong>シミュレータモード対応</strong>:</p>
+<p><code>sim_mode</code>パラメータが<code>true</code>の場合、Pingデータがなくても<code>OK</code>として扱います（シミュレータではPing機能が使用されないため）。</p>
+<p><strong>実装ファイル</strong>: <code>crane_robot_receiver/src/diagnostic_publisher.cpp:communicationDiagnosticCallback</code></p>
+<h4 id="2-battery">2. バッテリー監視（battery）<a class="headerlink" href="#2-battery" title="Permanent link">&para;</a></h4>
+<p>ロボットのバッテリー電圧を監視します。</p>
+<p><strong>監視項目</strong>: バッテリー電圧</p>
+<p><strong>判定基準</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>レベル</th>
+<th>メッセージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>電圧 &lt; 22.0V</td>
+<td>ERROR</td>
+<td>"Battery voltage is too low: {voltage} V"</td>
+</tr>
+<tr>
+<td>電圧 &lt; 23.0V</td>
+<td>WARN</td>
+<td>"Battery voltage is low: {voltage} V"</td>
+</tr>
+<tr>
+<td>電圧 ≥ 23.0V</td>
+<td>OK</td>
+<td>"Battery voltage is OK: {voltage} V"</td>
+</tr>
+<tr>
+<td>バッテリーデータなし</td>
+<td>WARN</td>
+<td>"No battery data available"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>KeyValue情報</strong>:</p>
+<ul>
+<li><code>voltage</code>: バッテリー電圧（ボルト）</li>
+</ul>
+<p><strong>実装ファイル</strong>: <code>crane_robot_receiver/src/diagnostic_publisher.cpp:batteryDiagnosticCallback</code></p>
+<h4 id="3-robot_error">3. ロボットエラー監視（robot_error）<a class="headerlink" href="#3-robot_error" title="Permanent link">&para;</a></h4>
+<p>RobotFeedbackメッセージから報告されるハードウェアエラーを監視します。</p>
+<p><strong>監視対象</strong>:</p>
+<ul>
+<li><strong>POWERエラー</strong>: 電源系統のエラー（14種類）</li>
+<li><strong>BLDCモーターエラー</strong>: 4つの駆動モーター（RF, RB, LB, LF）のエラー（各7種類）</li>
+</ul>
+<p><strong>判定基準</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>レベル</th>
+<th>メッセージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>エラーあり (<code>has_error == true</code>)</td>
+<td>ERROR</td>
+<td>"{エラー種別}: {エラー詳細} (継続時間: {duration}s, 値: {value})"</td>
+</tr>
+<tr>
+<td>エラーなし</td>
+<td>OK</td>
+<td>"No robot error detected"</td>
+</tr>
+<tr>
+<td>フィードバックなし</td>
+<td>WARN</td>
+<td>"No feedback data available"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>エラー種別の判定</strong>:</p>
+<ul>
+<li><code>error_id == 100</code>: POWERエラー</li>
+<li><code>error_id == 0-3</code>: BLDCモーターエラー（0=RF, 1=RB, 2=LB, 3=LF）</li>
+</ul>
+<p><strong>KeyValue情報</strong>:</p>
+<ul>
+<li><code>error_id</code>: エラー発生箇所ID</li>
+<li><code>error_info</code>: エラー種別コード</li>
+<li><code>error_value</code>: エラー値</li>
+<li><code>error_duration</code>: エラー継続時間（秒）</li>
+</ul>
+<p>詳細なエラーコードは<a href="#エラーコードリファレンス">エラーコードリファレンス</a>を参照してください。</p>
+<p><strong>実装ファイル</strong>: <code>crane_robot_receiver/src/diagnostic_publisher.cpp:robotErrorDiagnosticCallback</code></p>
+<h4 id="_10">エラーマップ管理<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>DiagnosticPublisherは各ロボットについて**エラーマップ**（<code>std::map&lt;std::string, ErrorInfo&gt;</code>）を維持し、複数のエラーを同時に追跡します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">ErrorInfo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">;</span><span class="w">        </span><span class="c1">// エラータイプ (robot_error, communication, battery)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="p">;</span><span class="w">     </span><span class="c1">// エラーメッセージ</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">;</span><span class="w">               </span><span class="c1">// エラーレベル (0: OK, 1: WARN, 2: ERROR, 3: STALE)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="n">timestamp</span><span class="p">;</span><span class="w">  </span><span class="c1">// エラーが発生した時刻</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">};</span>
+</code></pre></div>
+<p><strong>エラータイムアウト処理</strong>:</p>
+<p>10秒以上経過したエラーはマップから削除され、可視化からも消えます。これにより、一時的なエラーが解消された後の状態を正確に反映できます。</p>
+<h4 id="_11">可視化機能<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>DiagnosticPublisherは診断情報をFoxgloveで可視化するための機能を提供します：</p>
+<ul>
+<li><strong>エラーメッセージの表示</strong>: ロボットの位置にエラーメッセージをテキストとして表示</li>
+<li><strong>色分け</strong>: エラーレベルに応じて色を変更（WARN=黄色、ERROR=赤、STALE=グレー）</li>
+<li><strong>タイムスタンプ管理</strong>: 古いエラーは自動的に非表示</li>
+</ul>
+<p><strong>実装ファイル</strong>: <code>crane_robot_receiver/src/diagnostic_publisher.cpp:visualizeRobotErrors</code></p>
+<h4 id="_12">シミュレータモード<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p><code>sim_mode</code>パラメータ（デフォルト: <code>false</code>）により、シミュレータと実機で動作を切り替えます：</p>
+<ul>
+<li><strong>実機モード</strong> (<code>sim_mode: false</code>):<ul>
+<li>Pingデータ必須</li>
+<li>バッテリーデータ必須</li>
+<li>すべての診断を厳密に実行</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>シミュレータモード</strong> (<code>sim_mode: true</code>):<ul>
+<li>Pingデータなしでも<code>OK</code></li>
+<li>その他の診断は通常通り実行</li>
+</ul>
+</li>
+</ul>
+<p><strong>パラメータ設定</strong>: <code>crane.launch.xml</code></p>
+<hr />
+<h3 id="crane_local_planner">crane_local_planner<a class="headerlink" href="#crane_local_planner" title="Permanent link">&para;</a></h3>
+<p>経路計画システムの健全性を監視します。</p>
+<h4 id="_13">診断名<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>local_planner/path_planning
+</code></pre></div>
+<h4 id="_14">監視項目<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p>LocalPlannerの初期化状態とWorldModelの取得状態を監視します。</p>
+<p><strong>判定基準</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>レベル</th>
+<th>メッセージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プランナー未初期化</td>
+<td>ERROR</td>
+<td>"Planner is not initialized"</td>
+</tr>
+<tr>
+<td>WorldModel未取得</td>
+<td>WARN</td>
+<td>"WorldModel is not available"</td>
+</tr>
+<tr>
+<td>WorldModel未更新（1秒以上）</td>
+<td>WARN</td>
+<td>"WorldModel is stale"</td>
+</tr>
+<tr>
+<td>正常動作</td>
+<td>OK</td>
+<td>"Path planning is working normally"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>実装ファイル</strong>: <code>crane_local_planner/src/local_planner.cpp</code></p>
+<hr />
+<h3 id="crane_world_model_publisher">crane_world_model_publisher<a class="headerlink" href="#crane_world_model_publisher" title="Permanent link">&para;</a></h3>
+<p>Vision処理の状態を監視します。</p>
+<h4 id="_15">診断名<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>vision/processing
+</code></pre></div>
+<h4 id="_16">監視項目<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>Vision GCからのデータ受信状態を監視します。</p>
+<p><strong>判定基準</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>レベル</th>
+<th>メッセージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visionデータなし（1秒以上）</td>
+<td>ERROR</td>
+<td>"No vision data received for over 1 second"</td>
+</tr>
+<tr>
+<td>正常処理中</td>
+<td>OK</td>
+<td>"Vision processing is running"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>実装ファイル</strong>: <code>crane_world_model_publisher/src/world_model_publisher.cpp</code></p>
+<hr />
+<h3 id="crane_session_coordinator">crane_session_coordinator<a class="headerlink" href="#crane_session_coordinator" title="Permanent link">&para;</a></h3>
+<p>AI計画サイクルの監視を行います。</p>
+<h4 id="_17">診断名<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ai_planner/planning_cycle
+</code></pre></div>
+<h4 id="_18">監視項目<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>AI計画の実行サイクルとWorldModelの更新状態を監視します。</p>
+<p><strong>判定基準</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>レベル</th>
+<th>メッセージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WorldModel未準備</td>
+<td>WARN</td>
+<td>"WorldModel is not ready"</td>
+</tr>
+<tr>
+<td>更新なし（1秒以上）</td>
+<td>ERROR</td>
+<td>"Planning cycle has not run for over 1 second"</td>
+</tr>
+<tr>
+<td>更新遅延（500ms以上）</td>
+<td>WARN</td>
+<td>"Planning cycle is slow (last update: {time} ms ago)"</td>
+</tr>
+<tr>
+<td>正常動作</td>
+<td>OK</td>
+<td>"Planning cycle is running normally (last update: {time} ms ago)"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>実装ファイル</strong>: <code>crane_session_coordinator/src/crane_session_coordinator.cpp</code></p>
+<hr />
+<h3 id="diagnosedpublishercrane_comm">DiagnosedPublisher（crane_comm）<a class="headerlink" href="#diagnosedpublishercrane_comm" title="Permanent link">&para;</a></h3>
+<p>トピックの配信頻度を自動監視するテンプレートクラスです。</p>
+<h4 id="_19">概要<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p><code>DiagnosedPublisher</code>は通常のROS 2 Publisherをラップし、トピックの配信頻度を自動的に診断します。</p>
+<h4 id="_20">使用箇所<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<p>以下のコンポーネントで使用されています：</p>
+<table>
+<thead>
+<tr>
+<th>コンポーネント</th>
+<th>トピック</th>
+<th>最小頻度</th>
+<th>最大頻度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WorldModelPublisher</td>
+<td><code>/world_model</code></td>
+<td>50 Hz</td>
+<td>70 Hz</td>
+</tr>
+<tr>
+<td>TacticCoordinator</td>
+<td><code>/robot_commands</code></td>
+<td>50 Hz</td>
+<td>70 Hz</td>
+</tr>
+<tr>
+<td>LocalTactic</td>
+<td><code>/robot_commands</code></td>
+<td>50 Hz</td>
+<td>70 Hz</td>
+</tr>
+<tr>
+<td>SimSender</td>
+<td>grSimコマンド</td>
+<td>50 Hz</td>
+<td>70 Hz</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">動作原理<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">MessageT</span><span class="o">&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">DiagnosedPublisher</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="c1">// トピック配信と同時に診断情報を更新</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">publish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">MessageT</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">topic_diagnostic</span><span class="p">.</span><span class="n">tick</span><span class="p">(</span><span class="n">clock</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">());</span><span class="w">  </span><span class="c1">// 配信頻度を記録</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">publisher</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">};</span>
+</code></pre></div>
+<p><code>diagnostic_updater::TopicDiagnostic</code>が内部で配信頻度を計測し、設定された範囲（min/max Hz）外の場合に自動的にWARNまたはERRORを報告します。</p>
+<p><strong>実装ファイル</strong>: <code>utility/crane_comm/include/crane_comm/diagnosed_publisher.hpp</code></p>
+<hr />
+<h2 id="_22">利用可否判定の多層設計<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<h3 id="_23">循環参照回避のための設計思想<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>診断結果を利用可否判定に反映する際、**診断の入力として利用可否を参照すると循環参照が発生**します。これを回避するため、入力ソース別にavailableを分離しています。</p>
+<h3 id="robotinfocavailable">RobotInfo（C++構造体）の多層available<a class="headerlink" href="#robotinfocavailable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// crane_physics/robot_info.hpp</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">RobotInfo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="c1">// 入力ソース別の基礎データ（相互に独立）</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">available_vision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">     </span><span class="c1">// ビジョン検出（診断結果に依存しない）</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">available_hardware</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">   </span><span class="c1">// ハードウェア診断結果</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">available_feedback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">   </span><span class="c1">// フィードバック検出</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="c1">// 判定関数（用途に応じて使い分け）</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">available</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">available_vision</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">available_hardware</span><span class="p">;</span><span class="w">  </span><span class="c1">// 基本判定</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">availableStrict</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">available_vision</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">available_hardware</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">available_feedback</span><span class="p">;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">availableLoose</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">available_vision</span><span class="p">;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">};</span>
+</code></pre></div>
+<h3 id="robotinfo">RobotInfoメッセージフィールド<a class="headerlink" href="#robotinfo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a># crane_msgs/msg/RobotInfo.msg
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a># 入力ソース別の検出状態（循環参照回避のため個別に保持）
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>bool available_vision      # ビジョンで検出されているか
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>bool available_feedback    # フィードバックで検出されているか
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>bool available_tracker     # 内部トラッカーで検出されているか
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a># エラー情報（診断システムへの入力）
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>bool has_error
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>uint16 error_id
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>uint16 error_info
+</code></pre></div>
+<h3 id="_24">統合処理とデータフロー<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>[ビジョン/フィードバック] → available_vision, available_feedback
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>                            ↓（診断の入力）
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>                       Diagnostic Publisher
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>                            ↓
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>                     /diagnostics_agg
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>                            ↓（診断の出力）
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>                     available_hardware
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>                            ↓
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>            available() = available_vision &amp;&amp; available_hardware
+</code></pre></div>
+<p><strong>重要</strong>: 診断は<code>available_vision</code>等のみを参照し、診断結果の<code>available_hardware</code>には依存しないため、循環参照を完全に回避できます。</p>
+<h3 id="_25">エラーレベルの扱い<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>OK/WARN</strong>: <code>available_hardware = true</code>（動作可能）</li>
+<li><strong>ERROR/STALE</strong>: <code>available_hardware = false</code>（動作不可）</li>
+</ul>
+<p><strong>実装ファイル</strong>: <code>crane_msg_wrappers/src/world_model_wrapper.cpp</code>, <code>crane_physics/robot_info.hpp</code></p>
+<hr />
+<h2 id="_26">エラーコードリファレンス<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
+<h3 id="_27">エラー種別<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>ロボットのハードウェアエラーは以下の2種類に分類されます：</p>
+<ul>
+<li><strong>POWERエラー</strong> (<code>error_id == 100</code>): 電源系統のエラー（電圧不足、過電圧、過電流、キャパシタ異常、過熱など14種類）</li>
+<li><strong>BLDCモーターエラー</strong> (<code>error_id == 0-3</code>): 4つの駆動モーター（RF, RB, LB, LF）のエラー（電圧異常、過電流、過熱、エンコーダエラーなど7種類）</li>
+</ul>
+<h3 id="_28">エラーコード詳細<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>詳細なエラーコード一覧とビットフラグ定義は以下を参照：</p>
+<ul>
+<li><strong>定義</strong>: <code>crane_robot_receiver/include/crane_robot_receiver/robot_errors.hpp</code></li>
+<li><strong>変換関数</strong>: <code>getPowerErrorString()</code>, <code>getBLDCErrorString()</code></li>
+</ul>
+<p>エラーメッセージ例: <code>POWER : UNDER_VOLTAGE</code>, <code>BLDC-RF : MOTOR_OVER_HEAT</code></p>
+<hr />
+<h2 id="_29">診断情報の活用<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<h3 id="_30">ロボット利用可否判定<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p>診断結果は<code>available()</code>関数で総合判定され、故障ロボットが自動的にAI計画から除外されます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// 基本判定: vision &amp;&amp; hardware</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">info</span><span class="o">-&gt;</span><span class="n">available</span><span class="p">()</span><span class="w">        </span><span class="c1">// プランナーで使用</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">info</span><span class="o">-&gt;</span><span class="n">availableStrict</span><span class="p">()</span><span class="w">  </span><span class="c1">// 重要操作で使用</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">info</span><span class="o">-&gt;</span><span class="n">availableLoose</span><span class="p">()</span><span class="w">   </span><span class="c1">// 緊急時/表示用</span>
+</code></pre></div>
+<h3 id="_31">可視化<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Foxglove</strong>: ロボット位置にエラーメッセージを色分け表示（10秒タイムアウト）</li>
+<li><strong>rqt_robot_monitor</strong>: <code>ros2 run rqt_robot_monitor rqt_robot_monitor</code> で階層的な診断情報を確認</li>
+</ul>
+<hr />
+<h2 id="_32">設定ファイル<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<h3 id="diagnostic_aggregatoryaml">diagnostic_aggregator.yaml<a class="headerlink" href="#diagnostic_aggregatoryaml" title="Permanent link">&para;</a></h3>
+<p>診断情報の階層構造を定義する設定ファイルです。</p>
+<p><strong>ファイルパス</strong>: <code>crane_bringup/config/diagnostic_aggregator.yaml</code></p>
+<h4 id="_33">基本構造<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">analyzers</span><span class="p">:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">ros__parameters</span><span class="p">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;SSL_System&#39;</span><span class="w">  </span><span class="c1"># ルートパス</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="c1"># Base Station（計算PC）の診断</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nt">base_station</span><span class="p">:</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/AnalyzerGroup</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Base_Station</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">      </span><span class="nt">analyzers</span><span class="p">:</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">        </span><span class="nt">vision</span><span class="p">:</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/GenericAnalyzer</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vision</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">          </span><span class="nt">contains</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;vision/&#39;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">          </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">        </span><span class="nt">ai_planner</span><span class="p">:</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/GenericAnalyzer</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI_Planner</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">          </span><span class="nt">contains</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;ai_planner/&#39;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">          </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">        </span><span class="nt">local_planner</span><span class="p">:</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/GenericAnalyzer</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Local_Planner</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">          </span><span class="nt">contains</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;local_planner/&#39;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">          </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w">    </span><span class="c1"># Team（ロボット群）の診断</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">    </span><span class="nt">team</span><span class="p">:</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/AnalyzerGroup</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Team</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">      </span><span class="nt">analyzers</span><span class="p">:</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">        </span><span class="nt">robot_00</span><span class="p">:</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/GenericAnalyzer</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Robot_00</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">          </span><span class="nt">contains</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;robot_00/&#39;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">          </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">        </span><span class="c1"># robot_01 から robot_12 まで同様</span>
+</code></pre></div>
+<h4 id="_34">アナライザータイプ<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>AnalyzerGroup</strong>: 子アナライザーをグループ化</li>
+<li><strong>GenericAnalyzer</strong>: パターンマッチングで診断を集約</li>
+</ul>
+<h4 id="_35">パラメータ<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>path</strong>: 階層パス</li>
+<li><strong>contains</strong>: マッチングパターン（リスト）</li>
+<li><strong>timeout</strong>: タイムアウト時間（秒）</li>
+</ul>
+<h3 id="cranelaunchxml">crane.launch.xml統合<a class="headerlink" href="#cranelaunchxml" title="Permanent link">&para;</a></h3>
+<p>診断ノードの起動設定です。</p>
+<p><strong>ファイルパス</strong>: <code>crane_bringup/launch/crane.launch.xml</code></p>
+<h4 id="diagnostic_publisher_node">diagnostic_publisher_node起動<a class="headerlink" href="#diagnostic_publisher_node" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">&lt;node</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;crane_robot_receiver&quot;</span><span class="w"> </span><span class="na">exec=</span><span class="s">&quot;diagnostic_publisher_node&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;diagnostic_publisher&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sim_mode&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$(var sim_mode)&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nt">&lt;/node&gt;</span>
+</code></pre></div>
+<p><strong>パラメータ</strong>:</p>
+<ul>
+<li><code>sim_mode</code>: シミュレータモードフラグ（デフォルト: <code>false</code>）</li>
+</ul>
+<h4 id="diagnostic_aggregator">diagnostic_aggregator起動<a class="headerlink" href="#diagnostic_aggregator" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nt">&lt;node</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;diagnostic_aggregator&quot;</span><span class="w"> </span><span class="na">exec=</span><span class="s">&quot;aggregator_node&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;diagnostic_aggregator&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;$(find-pkg-share crane_bringup)/config/diagnostic_aggregator.yaml&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nt">&lt;/node&gt;</span>
+</code></pre></div>
+<hr />
+<h2 id="_36">診断トピック<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h2>
+<h3 id="_37">標準トピック<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<p>ROS 2 diagnosticsが提供する標準トピックです。</p>
+<h4 id="diagnostics">/diagnostics<a class="headerlink" href="#diagnostics" title="Permanent link">&para;</a></h4>
+<p><strong>型</strong>: <code>diagnostic_msgs/msg/DiagnosticArray</code></p>
+<p><strong>説明</strong>: すべてのコンポーネントから配信される生の診断情報</p>
+<p><strong>配信者</strong>:</p>
+<ul>
+<li>DiagnosticPublisher（各ロボット×3診断）</li>
+<li>WorldModelPublisher</li>
+<li>TacticCoordinator</li>
+<li>LocalTactic</li>
+<li>DiagnosedPublisher（各トピック）</li>
+</ul>
+<p><strong>サンプル確認</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics
+</code></pre></div>
+<h4 id="diagnostics_agg">/diagnostics_agg<a class="headerlink" href="#diagnostics_agg" title="Permanent link">&para;</a></h4>
+<p><strong>型</strong>: <code>diagnostic_msgs/msg/DiagnosticArray</code></p>
+<p><strong>説明</strong>: <code>diagnostic_aggregator</code>によって階層化・集約された診断情報</p>
+<p><strong>配信者</strong>: diagnostic_aggregator</p>
+<p><strong>サンプル確認</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics_agg
+</code></pre></div>
+<h4 id="diagnostics_toplevel_state">/diagnostics_toplevel_state<a class="headerlink" href="#diagnostics_toplevel_state" title="Permanent link">&para;</a></h4>
+<p><strong>型</strong>: <code>diagnostic_msgs/msg/DiagnosticStatus</code></p>
+<p><strong>説明</strong>: システム全体の最上位レベルの診断状態</p>
+<p><strong>配信者</strong>: diagnostic_aggregator</p>
+<p><strong>サンプル確認</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics_toplevel_state
+</code></pre></div>
+<h3 id="_38">ロボット別トピック（後方互換）<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<p>各ロボット専用の診断トピックも提供されています。</p>
+<h4 id="diagnosticsrobot_02d">/diagnostics/robot_{:02d}<a class="headerlink" href="#diagnosticsrobot_02d" title="Permanent link">&para;</a></h4>
+<p><strong>型</strong>: <code>diagnostic_msgs/msg/DiagnosticArray</code></p>
+<p><strong>説明</strong>: 特定ロボットの診断情報（後方互換のため提供）</p>
+<p><strong>配信者</strong>: DiagnosticPublisher</p>
+<p><strong>例</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics/robot_00
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics/robot_05
+</code></pre></div>
+<hr />
+<h2 id="_39">開発ガイド<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h2>
+<h3 id="_40">新規診断項目の追加方法<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<p>新しいコンポーネントに診断機能を追加する手順です。</p>
+<h4 id="1-diagnostic_updater">1. diagnostic_updaterの使用<a class="headerlink" href="#1-diagnostic_updater" title="Permanent link">&para;</a></h4>
+<p><strong>ヘッダーインクルード</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;diagnostic_updater/diagnostic_updater.hpp&gt;</span>
+</code></pre></div>
+<p><strong>メンバ変数追加</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyNode</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span><span class="n">diagnostic_updater</span><span class="o">::</span><span class="n">Updater</span><span class="w"> </span><span class="n">diagnostics_updater_</span><span class="p">;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">};</span>
+</code></pre></div>
+<p><strong>コンストラクタで初期化</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">MyNode</span><span class="o">::</span><span class="n">MyNode</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;my_node&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">diagnostics_updater_</span><span class="p">(</span><span class="k">this</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="c1">// 診断タスクを追加</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="n">diagnostics_updater_</span><span class="p">.</span><span class="n">add</span><span class="p">(</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="s">&quot;my_component/status&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// 診断名</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="k">this</span><span class="p">,</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="o">&amp;</span><span class="n">MyNode</span><span class="o">::</span><span class="n">diagnosticCallback</span><span class="w">  </span><span class="c1">// コールバック関数</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span><span class="p">);</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">  </span><span class="c1">// 更新頻度を設定（オプション）</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">  </span><span class="n">diagnostics_updater_</span><span class="p">.</span><span class="n">setHardwareID</span><span class="p">(</span><span class="s">&quot;my_hardware&quot;</span><span class="p">);</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>診断コールバック実装</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyNode::diagnosticCallback</span><span class="p">(</span><span class="n">diagnostic_updater</span><span class="o">::</span><span class="n">DiagnosticStatusWrapper</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">stat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">is_error_condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="n">stat</span><span class="p">.</span><span class="n">summary</span><span class="p">(</span><span class="n">diagnostic_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DiagnosticStatus</span><span class="o">::</span><span class="n">ERROR</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;エラーが発生しました&quot;</span><span class="p">);</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="n">stat</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;error_code&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error_code</span><span class="p">);</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">    </span><span class="n">stat</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;detail&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error_detail</span><span class="p">);</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">is_warn_condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">    </span><span class="n">stat</span><span class="p">.</span><span class="n">summary</span><span class="p">(</span><span class="n">diagnostic_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DiagnosticStatus</span><span class="o">::</span><span class="n">WARN</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;警告状態です&quot;</span><span class="p">);</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">    </span><span class="n">stat</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;warning_info&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">warn_info</span><span class="p">);</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="n">stat</span><span class="p">.</span><span class="n">summary</span><span class="p">(</span><span class="n">diagnostic_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DiagnosticStatus</span><span class="o">::</span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;正常動作中&quot;</span><span class="p">);</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="w">    </span><span class="n">stat</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;running&quot;</span><span class="p">);</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>定期的に更新</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyNode::timerCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="c1">// 処理...</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">  </span><span class="c1">// 診断情報を更新</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">  </span><span class="n">diagnostics_updater_</span><span class="p">.</span><span class="n">force_update</span><span class="p">();</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="2">2. 診断名の命名規則<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p>診断名は以下の規則に従ってください：</p>
+<ul>
+<li><strong>カテゴリ/項目名</strong>: <code>category/item_name</code>形式</li>
+<li><strong>ロボット関連</strong>: <code>robot_{:02d}/category</code>（必ず2桁）</li>
+<li><strong>コンポーネント名を明確に</strong>: 他と重複しない固有の名前</li>
+</ul>
+<p><strong>良い例</strong>:</p>
+<ul>
+<li><code>vision/processing</code></li>
+<li><code>ai_planner/planning_cycle</code></li>
+<li><code>robot_00/communication</code></li>
+<li><code>my_component/initialization</code></li>
+</ul>
+<p><strong>悪い例</strong>:</p>
+<ul>
+<li><code>status</code>（曖昧すぎる）</li>
+<li><code>robot_0/error</code>（1桁表記）</li>
+<li><code>MyComponent</code>（階層なし）</li>
+</ul>
+<h4 id="3-diagnostic_aggregatoryaml">3. diagnostic_aggregator.yamlへの追加<a class="headerlink" href="#3-diagnostic_aggregatoryaml" title="Permanent link">&para;</a></h4>
+<p>新しい診断を階層に追加します。</p>
+<p><strong>Base Station配下に追加する場合</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nt">analyzers</span><span class="p">:</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="nt">ros__parameters</span><span class="p">:</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;SSL_System&#39;</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">    </span><span class="nt">base_station</span><span class="p">:</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/AnalyzerGroup</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">      </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Base_Station</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="w">      </span><span class="nt">analyzers</span><span class="p">:</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="w">        </span><span class="c1"># 既存のアナライザー...</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="w">        </span><span class="c1"># 新規追加</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="w">        </span><span class="nt">my_component</span><span class="p">:</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic_aggregator/GenericAnalyzer</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MyComponent</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a><span class="w">          </span><span class="nt">contains</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;my_component/&#39;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="w">          </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span>
+</code></pre></div>
+<p><strong>Team（ロボット）配下に追加する場合</strong>:</p>
+<p>ロボット別の診断は自動的に<code>robot_{:02d}/</code>パターンでマッチングされるため、設定変更不要です。</p>
+<h4 id="4-diagnosedpublisher">4. DiagnosedPublisherの使用<a class="headerlink" href="#4-diagnosedpublisher" title="Permanent link">&para;</a></h4>
+<p>トピック配信頻度を監視する場合は、<code>DiagnosedPublisher</code>を使用します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;crane_comm/diagnosed_publisher.hpp&gt;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="c1">// 通常のPublisherの代わりにDiagnosedPublisherを使用</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="n">crane</span><span class="o">::</span><span class="n">DiagnosedPublisher</span><span class="o">&lt;</span><span class="n">MyMessageType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">diagnosed_pub</span><span class="p">(</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">  </span><span class="k">this</span><span class="p">,</span><span class="w">                    </span><span class="c1">// ノード</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">  </span><span class="s">&quot;/my_topic&quot;</span><span class="p">,</span><span class="w">             </span><span class="c1">// トピック名</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">  </span><span class="mi">10</span><span class="p">,</span><span class="w">                      </span><span class="c1">// QoS履歴深度</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="w">  </span><span class="mf">50.0</span><span class="p">,</span><span class="w">                    </span><span class="c1">// 最小更新頻度（Hz）</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="w">  </span><span class="mf">70.0</span><span class="w">                     </span><span class="c1">// 最大更新頻度（Hz）</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="p">);</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="c1">// 配信（診断も自動的に更新される）</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a><span class="n">diagnosed_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="_41">デバッグ方法<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<h4 id="rqt_robot_monitor">rqt_robot_monitorの使用<a class="headerlink" href="#rqt_robot_monitor" title="Permanent link">&para;</a></h4>
+<p>GUIで診断情報を確認します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>rqt_robot_monitor<span class="w"> </span>rqt_robot_monitor
+</code></pre></div>
+<h4 id="foxglove">Foxgloveでの確認<a class="headerlink" href="#foxglove" title="Permanent link">&para;</a></h4>
+<p>Foxglove Studioで以下を表示：</p>
+<ol>
+<li><strong>Diagnosticsパネル</strong>: <code>/diagnostics_agg</code>を表示</li>
+<li><strong>3Dパネル</strong>: ロボット位置のエラーメッセージを確認</li>
+</ol>
+<h4 id="_42">トピックの直接確認<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<p>ターミナルでトピックを監視します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># 生の診断情報</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="c1"># 集約された診断情報</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics_agg
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="c1"># 最上位レベルの状態</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics_toplevel_state
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="c1"># 特定ロボットの診断</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics/robot_00
+</code></pre></div>
+<h4 id="_43">診断情報のフィルタリング<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
+<p>特定の診断名のみを表示します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/diagnostics<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="s2">&quot;robot_00/battery&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="_44">トラブルシューティング<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h2>
+<h3 id="_45">主な問題と対処<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>症状</th>
+<th>確認方法</th>
+<th>対処法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>診断情報が表示されない</td>
+<td><code>ros2 node list \| grep aggregator</code><br><code>ros2 topic echo /diagnostics</code></td>
+<td>aggregator起動確認<br>YAMLの<code>contains</code>パターン確認</td>
+</tr>
+<tr>
+<td>エラーが誤検出される</td>
+<td>閾値とsim_mode確認</td>
+<td><code>diagnostic_publisher.cpp</code>の閾値調整<br><code>sim_mode: true</code>（シミュレータ時）</td>
+</tr>
+<tr>
+<td>STALEエラー頻発</td>
+<td><code>ros2 topic hz /diagnostics</code></td>
+<td><code>force_update()</code>呼び出し確認<br>タイムアウト延長</td>
+</tr>
+<tr>
+<td>ロボットが利用不可</td>
+<td><code>ros2 topic echo /diagnostics/robot_XX</code></td>
+<td>ERRORレベル診断を確認<br><code>available_vision/hardware/feedback</code>の各状態を確認</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_46">参考資料<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h2>
+<h3 id="ros-2">ROS 2公式ドキュメント<a class="headerlink" href="#ros-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>diagnostic_updater</strong>: <a href="https://github.com/ros/diagnostics/tree/ros2/diagnostic_updater">https://github.com/ros/diagnostics/tree/ros2/diagnostic_updater</a></li>
+<li><strong>diagnostic_aggregator</strong>: <a href="https://github.com/ros/diagnostics/tree/ros2/diagnostic_aggregator">https://github.com/ros/diagnostics/tree/ros2/diagnostic_aggregator</a></li>
+<li><strong>diagnostic_msgs</strong>: <a href="https://github.com/ros2/common_interfaces/tree/rolling/diagnostic_msgs">https://github.com/ros2/common_interfaces/tree/rolling/diagnostic_msgs</a></li>
+</ul>
+<h3 id="_47">関連パッケージドキュメント<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../packages/crane_robot_receiver/">crane_robot_receiver</a> - DiagnosticPublisher実装詳細</li>
+<li><a href="../packages/crane_local_planner/">crane_local_planner</a> - LocalPlanner診断実装</li>
+<li><a href="../packages/crane_world_model_publisher/">crane_world_model_publisher</a> - Vision診断実装</li>
+<li><a href="../packages/crane_session_coordinator/">crane_session_coordinator</a> - AI計画診断実装</li>
+<li><a href="../packages/crane_comm/">crane_comm</a> - DiagnosedPublisher実装詳細</li>
+</ul>
+<h3 id="crane">Crane内部実装ファイル<a class="headerlink" href="#crane" title="Permanent link">&para;</a></h3>
+<h4 id="_48">ヘッダーファイル<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>crane_robot_receiver/include/crane_robot_receiver/diagnostic_publisher.hpp</code> - DiagnosticPublisherクラス定義</li>
+<li><code>crane_robot_receiver/include/crane_robot_receiver/robot_errors.hpp</code> - エラーコード定義</li>
+<li><code>utility/crane_comm/include/crane_comm/diagnosed_publisher.hpp</code> - DiagnosedPublisherテンプレート</li>
+</ul>
+<h4 id="_49">実装ファイル<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>crane_robot_receiver/src/diagnostic_publisher.cpp</code> - DiagnosticPublisher実装</li>
+<li><code>crane_msg_wrappers/src/world_model_wrapper.cpp</code> - 診断情報の利用可否判定への統合</li>
+<li><code>crane_local_planner/src/local_planner.cpp</code> - LocalPlanner診断実装</li>
+<li><code>crane_world_model_publisher/src/world_model_publisher.cpp</code> - Vision診断実装</li>
+<li><code>crane_session_coordinator/src/crane_session_coordinator.cpp</code> - TacticCoordinator診断実装</li>
+</ul>
+<h4 id="_50">設定ファイル<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>crane_bringup/config/diagnostic_aggregator.yaml</code> - 診断階層構造定義</li>
+<li><code>crane_bringup/launch/crane.launch.xml</code> - 診断ノード起動設定</li>
+</ul>
+<h4 id="_51">メッセージ定義<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>crane_msgs/msg/RobotInfo.msg</code> - エラー情報フィールド</li>
+<li><code>crane_msgs/msg/RobotFeedback.msg</code> - ハードウェアフィードバック</li>
+</ul>
+<h3 id="_52">可視化ツール<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Foxglove Studio</strong>: <a href="https://foxglove.dev/">https://foxglove.dev/</a></li>
+<li><strong>rqt_robot_monitor</strong>: ROS 2パッケージ（<code>ros-${ROS_DISTRO}-rqt-robot-monitor</code>）</li>
+</ul>
+<hr />
+<h2 id="_53">まとめ<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h2>
+<p>Crane診断システムは、ROS 2の標準diagnostics機能を活用し、システム全体の健全性を包括的に監視します。</p>
+<p><strong>主要な設計原則</strong>:</p>
+<ol>
+<li><strong>3層アーキテクチャ</strong>: データ収集→統合→活用により、各コンポーネントの状態を階層的に管理</li>
+<li><strong>循環参照回避</strong>: 入力ソース別にavailableを分離し、診断の入力（<code>available_vision</code>等）と出力（<code>available_hardware</code>）を明確に分離</li>
+<li><strong>多層判定</strong>: 用途に応じて<code>available()</code>, <code>availableStrict()</code>, <code>availableLoose()</code>を使い分け</li>
+</ol>
+<p>診断情報は単なるログではなく、<strong>システムの自律的な動作調整</strong>（故障ロボットの自動除外）に活用される重要な情報です。新規診断項目の追加は<a href="#開発ガイド">開発ガイド</a>を参照してください。</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 00:11:59 UTC">February 10, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 ibis-ssl
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/team_ibis" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ibis-ssl" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
