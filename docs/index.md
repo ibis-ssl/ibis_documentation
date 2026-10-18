@@ -109,6 +109,14 @@ Orion ロボットの仕様の正本です。[ibis-ssl/specs](https://github.com
 
     [:lucide-arrow-right: 調査へ](others/crane/other_team/tigers.md)
 
+-   :lucide-library:{ .lg .middle .ibis-icon } __各リポジトリの文書__
+
+    ---
+
+    Main 基板・CM4・BLDC・Sub・昇圧基板のファームウェア、4 輪ステアリング機体、可視化ツールなどの文書です。
+
+    [:lucide-arrow-right: 一覧へ](others/index.md)
+
 -   :fontawesome-brands-github:{ .lg .middle .ibis-icon } __GitHub__
 
     ---

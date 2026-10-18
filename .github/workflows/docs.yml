@@ -26,20 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/checkout@v7
-        with:
-          repository: ibis-ssl/specs
-          path: docs/specs
-      - run: rm -rf docs/specs/.git docs/specs/.github
-      - uses: actions/checkout@v7
-        with:
-          repository: ibis-ssl/crane
-          ref: develop
-          path: .crane
-          sparse-checkout: docs
-      - run: |
-          mv .crane/docs docs/others/crane
-          rm -rf .crane
+      - run: scripts/fetch_docs.sh
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x

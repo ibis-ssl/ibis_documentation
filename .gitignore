@@ -1,4 +1,4 @@
 site/
 .cache/
 docs/specs/
-docs/others/crane/
+docs/others/*/
