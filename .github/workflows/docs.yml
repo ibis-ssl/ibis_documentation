@@ -7,6 +7,11 @@ on:
       - main
   pull_request:
   workflow_dispatch:
+  # 仕様は ibis-ssl/specs からビルド時に取得するため、specs の更新に追従して再ビルドする
+  repository_dispatch:
+    types: [specs-updated]
+  schedule:
+    - cron: "0 18 * * *"
 
 permissions:
   contents: read
@@ -22,10 +27,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: ibis-ssl/specs
+          path: docs/specs
+      - run: rm -rf docs/specs/.git docs/specs/.github
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
-      - run: pip install zensical mdx_truly_sane_lists
+      - run: pip install zensical mdx_truly_sane_lists markdown-callouts
       - run: zensical build --clean
       - uses: actions/configure-pages@v6
         if: github.event_name != 'pull_request'

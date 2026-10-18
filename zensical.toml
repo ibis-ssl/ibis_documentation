@@ -1,7 +1,7 @@
 [project]
 site_url = "https://ibis-ssl.github.io/ibis_documentation/"
 site_name = "ibis Documentation"
-site_description = "RoboCup Soccer Small Size League チーム ibis の公開ドキュメント"
+site_description = "RoboCup Soccer Small Size League チーム ibis の公開ドキュメント（Orion ロボットの仕様と開発資料）"
 copyright = "Copyright &copy; 2024-2026 ibis-ssl"
 
 repo_url = "https://github.com/ibis-ssl/ibis_documentation"
@@ -113,5 +113,7 @@ pymdownx.tabbed.alternate_style = true
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true
 pymdownx.tilde = {}
-# docs/ai は 2 スペースインデントのリストで書かれているため必要
+# docs/specs は GitHub 形式のアラート（> [!IMPORTANT] など）を使っているため必要
+"markdown_callouts.github_callouts" = {}
+# docs/others/crane は 2 スペースインデントのリストで書かれているため必要
 mdx_truly_sane_lists.nested_indent = 2
