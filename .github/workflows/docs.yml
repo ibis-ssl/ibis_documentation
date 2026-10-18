@@ -7,9 +7,8 @@ on:
       - main
   pull_request:
   workflow_dispatch:
-  # 仕様は ibis-ssl/specs からビルド時に取得するため、specs の更新に追従して再ビルドする
-  repository_dispatch:
-    types: [specs-updated]
+  # 仕様と他リポジトリの文書はビルド時に取得するため、定期的に再ビルドして追従する
+  # （急ぎで反映したいときは workflow_dispatch で手動実行する）
   schedule:
     - cron: "0 18 * * *"
 
@@ -27,11 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/checkout@v7
-        with:
-          repository: ibis-ssl/specs
-          path: docs/specs
-      - run: rm -rf docs/specs/.git docs/specs/.github
+      - run: scripts/fetch_docs.sh
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
