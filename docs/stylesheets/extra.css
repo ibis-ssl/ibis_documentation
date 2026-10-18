@@ -1,0 +1,169 @@
+/* ibis ブランドカラー（primary / accent = custom） */
+:root,
+[data-md-color-scheme="default"] {
+  --ibis-red: #d6303f;
+  --ibis-red-deep: #a51d2d;
+  --ibis-red-soft: rgba(214, 48, 63, 0.08);
+  --md-primary-fg-color: var(--ibis-red);
+  --md-primary-fg-color--light: #e85a66;
+  --md-primary-fg-color--dark: var(--ibis-red-deep);
+  --md-accent-fg-color: #ef4655;
+  --md-accent-fg-color--transparent: rgba(239, 70, 85, 0.1);
+  --md-typeset-a-color: var(--ibis-red-deep);
+}
+
+[data-md-color-scheme="slate"] {
+  --ibis-red: #ff5c69;
+  --ibis-red-deep: #ff8a93;
+  --ibis-red-soft: rgba(255, 92, 105, 0.12);
+  --md-primary-fg-color: #e2414f;
+  --md-primary-fg-color--light: #ff7a85;
+  --md-primary-fg-color--dark: #b52a37;
+  --md-accent-fg-color: #ff7a85;
+  --md-accent-fg-color--transparent: rgba(255, 122, 133, 0.12);
+  --md-typeset-a-color: #ff8a93;
+}
+
+/* 和文向けの本文調整 */
+.md-typeset {
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  font-feature-settings: "palt" 0;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ---- トップページ ---- */
+.ibis-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 2.5rem;
+  padding: 3.5rem 2.5rem;
+  border-radius: 1.25rem;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.18), transparent 45%),
+    radial-gradient(circle at 10% 110%, rgba(0, 0, 0, 0.25), transparent 50%),
+    linear-gradient(135deg, #e2414f 0%, #a51d2d 100%);
+  box-shadow: 0 1.25rem 2.5rem -1.5rem rgba(165, 29, 45, 0.6);
+}
+
+/* フィールドのセンターサークルとハーフウェイラインをモチーフにした装飾 */
+.ibis-hero::before,
+.ibis-hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.ibis-hero::before {
+  top: 50%;
+  right: -4rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.ibis-hero::after {
+  top: 0;
+  bottom: 0;
+  right: 5rem;
+  border-width: 0 0 0 2px;
+}
+
+.md-typeset .ibis-hero h1 {
+  margin: 0 0 0.6rem;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ibis-hero__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.15rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.md-typeset .ibis-hero p {
+  position: relative;
+  max-width: 36rem;
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.md-typeset .ibis-hero .md-button {
+  position: relative;
+  margin: 0 0.5rem 0.5rem 0;
+  border-color: #fff;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.md-typeset .ibis-hero .md-button--primary {
+  background: #fff;
+  color: #a51d2d;
+}
+
+.md-typeset .ibis-hero .md-button:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.85);
+  color: #a51d2d;
+}
+
+/* カード型グリッド */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border-radius: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  border-color: var(--ibis-red);
+  box-shadow: 0 0.75rem 1.5rem -1rem rgba(165, 29, 45, 0.45);
+}
+
+.md-typeset .grid.cards .ibis-icon {
+  color: var(--ibis-red);
+}
+
+.md-typeset .ibis-lead {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--ibis-red);
+  border-radius: 0 0.6rem 0.6rem 0;
+  background: var(--ibis-red-soft);
+}
+
+@media screen and (max-width: 44.9375em) {
+  .ibis-hero {
+    padding: 2.25rem 1.25rem;
+    border-radius: 0.9rem;
+  }
+
+  .md-typeset .ibis-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .ibis-hero::after {
+    display: none;
+  }
+}
