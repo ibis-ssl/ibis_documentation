@@ -11,7 +11,7 @@ hide:
 
 # ibis 公開ドキュメント
 
-RoboCup SSL に出場するチーム ibis が、Orion ロボットの仕様と AI「Crane」などの開発で得た知見を公開しています。
+RoboCup SSL に出場するチーム ibis が、Orion ロボットの仕様と、AI・ファームウェア・ツールの開発で得た知見を公開しています。
 
 [仕様を読む :lucide-arrow-right:](specs/README.md){ .md-button .md-button--primary }
 [チームHP](https://www.ibis-ssl.tokyo/){ .md-button }
@@ -67,62 +67,64 @@ Orion ロボットの仕様の正本です。[ibis-ssl/specs](https://github.com
 
 ## その他のリポジトリ
 
+ibis-ssl の各リポジトリにある文書です。元のリポジトリから毎日取得しています。[一覧](others/index.md)
+
 <div class="grid cards" markdown>
 
--   :lucide-compass:{ .lg .middle .ibis-icon } __Crane ガイド__
+-   :lucide-compass:{ .lg .middle .ibis-icon } __crane__
 
     ---
 
-    Vision から世界モデル、セッション、スキル、局所経路計画まで。Crane の動かし方と設計をまとめています。
+    AI「Crane」のガイド、ROS 2 パッケージの解説、環境構築、開発ログ、他チーム調査。
 
-    [:lucide-arrow-right: ガイドへ](others/crane/index.md)
+    [:lucide-arrow-right: crane](others/crane/index.md)
 
--   :lucide-package:{ .lg .middle .ibis-icon } __Crane パッケージ一覧__
-
-    ---
-
-    Crane を構成する ROS 2 パッケージごとの役割と実装の解説です。
-
-    [:lucide-arrow-right: パッケージへ](others/crane/packages/index.md)
-
--   :lucide-rocket:{ .lg .middle .ibis-icon } __Crane の環境構築・起動__
+-   :lucide-circuit-board:{ .lg .middle .ibis-icon } __G474_Orion_main__
 
     ---
 
-    開発環境のセットアップ、シミュレータでの起動、試合前のチェックリスト。
+    Orion の Main 基板（STM32G474）ファームウェア。
 
-    [:lucide-arrow-right: セットアップへ](others/crane/setup.md)
+    [:lucide-arrow-right: G474_Orion_main](others/G474_Orion_main/overview.md)
 
--   :lucide-notebook-pen:{ .lg .middle .ibis-icon } __開発ログ__
-
-    ---
-
-    日々の開発で試したこと・分かったことの記録です。
-
-    [:lucide-arrow-right: ログへ](others/crane/logs/2024-08-16.md)
-
--   :lucide-users:{ .lg .middle .ibis-icon } __他チーム調査__
+-   :lucide-cpu:{ .lg .middle .ibis-icon } __Orion_CM4__
 
     ---
 
-    TIGERs、ZJUNLict、RoboDragons など強豪チームの公開資料の分析です。
+    Orion の CM4 上のソフトウェアとホスト PC 側ツール。
 
-    [:lucide-arrow-right: 調査へ](others/crane/other_team/tigers.md)
+    [:lucide-arrow-right: Orion_CM4](others/Orion_CM4/overview.md)
 
--   :lucide-library:{ .lg .middle .ibis-icon } __各リポジトリの文書__
-
-    ---
-
-    Main 基板・CM4・BLDC・Sub・昇圧基板のファームウェア、4 輪ステアリング機体、可視化ツールなどの文書です。
-
-    [:lucide-arrow-right: 一覧へ](others/index.md)
-
--   :fontawesome-brands-github:{ .lg .middle .ibis-icon } __GitHub__
+-   :lucide-zap:{ .lg .middle .ibis-icon } __Orion の各基板__
 
     ---
 
-    ソースコードと仕様は ibis-ssl の GitHub で公開しています。
+    BLDC 基板、Sub 基板、昇圧・キッカー基板（STM32F303）のファームウェア。
 
-    [:lucide-arrow-right: ibis-ssl](https://github.com/ibis-ssl)
+    [:lucide-arrow-right: Orion_F303_BLDC](others/Orion_F303_BLDC/overview.md)
+
+    [:lucide-arrow-right: Orion_F303_sub](others/Orion_F303_sub/overview.md)
+
+    [:lucide-arrow-right: F303_boost](others/F303_boost/overview.md)
+
+-   :lucide-car:{ .lg .middle .ibis-icon } __4 輪ステアリング機体__
+
+    ---
+
+    メイン制御ボードとステアリング制御基板のファームウェア。
+
+    [:lucide-arrow-right: 4WS_MainFW](others/4WS_MainFW/overview.md)
+
+    [:lucide-arrow-right: SwerveControllerF303](others/SwerveControllerF303/system.md)
+
+-   :lucide-chart-scatter:{ .lg .middle .ibis-icon } __foxglove_crane_visualizer__
+
+    ---
+
+    Crane 用の Foxglove Studio 可視化拡張。
+
+    [:lucide-arrow-right: foxglove_crane_visualizer](others/foxglove_crane_visualizer/README.md)
 
 </div>
+
+ソースコードは [ibis-ssl の GitHub](https://github.com/ibis-ssl) で公開しています。
